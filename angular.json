@@ -6,12 +6,21 @@
     "defaultCollection": "@nativescript/schematics"
   },
   "projects": {
-    "blank": {
+    "nativescript-angular": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "ns"
+      "prefix": "ns",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": false
+        }
+      }
     }
   },
-  "defaultProject": "blank"
+  "defaultProject": "nativescript-angular"
 }
