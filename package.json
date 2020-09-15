@@ -11,6 +11,15 @@
   "description": "NativeScript Application",
   "license": "SEE LICENSE IN <your-license-filename>",
   "repository": "<fill-your-repository-here>",
+  "scripts": {
+    "run:android": "tns run android",
+    "run:ios": "tns run ios",
+    "debug:android": "tns debug android",
+    "debug:ios": "tns debug ios",
+    "build:android": "tns build android --key-store-path nativescript-angular.jks --key-store-password 123456 --key-store-alias nsa --key-store-alias-password 123456 --release",
+    "android-aot": "npm run build:android --env.aot",
+    "ios-aot": "tns build ios --env.aot"
+  },
   "dependencies": {
     "@angular/animations": "~8.2.0",
     "@angular/common": "~8.2.0",
