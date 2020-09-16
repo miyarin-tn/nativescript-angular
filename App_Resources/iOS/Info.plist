@@ -43,5 +43,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<!-- <key>NSCameraUsageDescription</key>
+	<string>Camera usage description</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Description text goes here</string> -->
+	<!-- <key>UIUserInterfaceStyle</key>
+	<string>Light</string> -->
+	<!-- <key>UIBackgroundModes</key>
+	<array>
+	<string>remote-notification</string>
+	</array> -->
 </dict>
 </plist>
