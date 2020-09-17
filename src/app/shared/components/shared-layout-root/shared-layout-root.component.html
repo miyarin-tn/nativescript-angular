@@ -1,0 +1,6 @@
+<GridLayout>
+  <ng-content select=".comp-content"></ng-content>
+  <StackLayout *ngIf="isShowNotify" ios:isPassThroughParentEnabled="true">
+    <!-- notify dialog for app -->
+  </StackLayout>
+</GridLayout>

@@ -9,14 +9,16 @@ import {
 } from './pipes';
 
 // components
-// import {
-// } from './components';
+import {
+  SharedLayoutRootComponent,
+} from './components';
 
 const SHARED_PIPES = [
   TranslatePipe,
 ];
 
 const SHARED_COMPONENTS = [
+  SharedLayoutRootComponent,
 ];
 
 @NgModule({
@@ -27,8 +29,7 @@ const SHARED_COMPONENTS = [
   imports: [
     NativeScriptCommonModule,
     NativeScriptFormsModule,
-    ReactiveFormsModule,
-    // ReactiveFormsModule.withConfig({ warnOnNgModelWithFormControl: 'never' })
+    ReactiveFormsModule, // ReactiveFormsModule.withConfig({ warnOnNgModelWithFormControl: 'never' })
   ],
   exports: [
     NativeScriptCommonModule,
