@@ -1,5 +1,7 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
+import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from '@shared/shared.module';
@@ -13,15 +15,23 @@ import {
 import {
   HttpService,
   ApiService,
+  AuthService,
 } from '@core/services';
 
 // component
 import { AppComponent } from './app.component';
+import { AuthInterceptor } from '@core/interceptor/token.interceptor';
 
 const CORE_PROVIDERS = [
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  },
   AuthGuard,
   HttpService,
   ApiService,
+  AuthService
 ];
 
 @NgModule({
@@ -30,6 +40,7 @@ const CORE_PROVIDERS = [
   ],
   imports: [
     NativeScriptModule,
+    NativeScriptHttpClientModule,
     AppRoutingModule,
     SharedModule,
   ],
